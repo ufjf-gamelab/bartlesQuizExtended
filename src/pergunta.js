@@ -2,7 +2,7 @@ import { passarPergunta } from "./main.js";
 
 let arquetipo = {
     killer: 0,
-    achivier: 0,
+    achiever: 0,
     socializer: 0,
     explorer: 0
 }
@@ -11,16 +11,16 @@ export function CalculaArquetipo(){
     let tipo = "";
 
    
-    if( arquetipo.killer > arquetipo.achivier && arquetipo.killer > arquetipo.socializer && arquetipo.killer > arquetipo.explorer){
+    if( arquetipo.killer > arquetipo.achiever && arquetipo.killer > arquetipo.socializer && arquetipo.killer > arquetipo.explorer){
         tipo = "Killer";
     }
-    if( arquetipo.achivier > arquetipo.killer && arquetipo.achivier > arquetipo.socializer && arquetipo.achivier > arquetipo.explorer){
-        tipo = "Achivier";
+    if( arquetipo.achiever > arquetipo.killer && arquetipo.achiever > arquetipo.socializer && arquetipo.achiever > arquetipo.explorer){
+        tipo = "Achiever";
     }
-    if( arquetipo.socializer > arquetipo.killer && arquetipo.socializer > arquetipo.achivier && arquetipo.socializer > arquetipo.explorer){
+    if( arquetipo.socializer > arquetipo.killer && arquetipo.socializer > arquetipo.achiever && arquetipo.socializer > arquetipo.explorer){
         tipo = "Socializer";
     }
-    if( arquetipo.explorer > arquetipo.killer && arquetipo.explorer > arquetipo.achivier && arquetipo.explorer > arquetipo.socializer){ 
+    if( arquetipo.explorer > arquetipo.killer && arquetipo.explorer > arquetipo.achiever && arquetipo.explorer > arquetipo.socializer){ 
         tipo     = "Explorer";
     }
  
