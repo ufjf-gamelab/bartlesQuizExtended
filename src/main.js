@@ -1,4 +1,5 @@
 import {CriaPergunta, CalculaArquetipo} from "./pergunta.js";
+import { MostrarTipo } from "./tela.js";
 import {AtualizaTela} from "./tela.js";
 let perguntas= [
     CriaPergunta("Você se sente mais à vontade, como jogador em um jogo online:", 
@@ -41,8 +42,8 @@ function porPerguntaTela(){
 export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
-        let arquetipo = CalculaArquetipo();
-        alert("Seu arquetipo é: " + arquetipo);
+        CalculaArquetipo();
+        MostrarTipo()
         return;
     }else{
         perguntaAtual++;

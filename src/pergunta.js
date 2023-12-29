@@ -8,15 +8,24 @@ let arquetipo = {
 }
 
 export function CalculaArquetipo(){
-    let maior = 0;
-    let arquetipo = "";
-    for (let chave in arquetipo){
-        if (arquetipo[chave] > maior){
-            maior = arquetipo[chave];
-            arquetipo = chave;
-        }
+    let tipo = "";
+
+   
+    if( arquetipo.killer > arquetipo.achivier && arquetipo.killer > arquetipo.socializer && arquetipo.killer > arquetipo.explorer){
+        tipo = "Killer";
     }
-    return arquetipo;
+    if( arquetipo.achivier > arquetipo.killer && arquetipo.achivier > arquetipo.socializer && arquetipo.achivier > arquetipo.explorer){
+        tipo = "Achivier";
+    }
+    if( arquetipo.socializer > arquetipo.killer && arquetipo.socializer > arquetipo.achivier && arquetipo.socializer > arquetipo.explorer){
+        tipo = "Socializer";
+    }
+    if( arquetipo.explorer > arquetipo.killer && arquetipo.explorer > arquetipo.achivier && arquetipo.explorer > arquetipo.socializer){ 
+        tipo     = "Explorer";
+    }
+ 
+
+    return tipo;
 }
 
 export function CriaPergunta(Pergunta, textoResposta1,Opcao1,textoResposta2, Opcao2){

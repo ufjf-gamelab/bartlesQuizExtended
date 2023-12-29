@@ -13,5 +13,11 @@ export function AtualizaTela(Pergunta) {
 
     Resposta1Ctn.onclick = Pergunta.cliqueReposta1;
     Resposta2Ctn.onclick = Pergunta.cliqueReposta2;
-
+}
+export function MostrarTipo(tipo) {
+    let resultado = document.querySelector("#resultado");
+   
+    resultado.innerHTML ="<h1>Seu arquetipo é: " + tipo + "</h1>"
+    
+   
 }
