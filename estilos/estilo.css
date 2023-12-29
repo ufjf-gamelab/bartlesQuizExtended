@@ -27,7 +27,7 @@ body{
     height: 100%;
 }
 main{
-    border: 2px solid black;
+
     width: 80%;
     height: 80%;
     max-height: 600px;
@@ -37,7 +37,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 80px;
 }
 main h2{
    margin: 0%;
@@ -56,10 +56,10 @@ main section{
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     justify-content: center;
 }
-main section button{
+button{
     border: 3px solid black;
     border-radius: 8px;
     background: whitesmoke;
@@ -68,7 +68,7 @@ main section button{
     height: auto;
     padding: 10px;
 }
-main section button:hover{
+button:hover{
     
     background: black;
     color: whitesmoke;

@@ -16,8 +16,15 @@ export function AtualizaTela(Pergunta) {
 }
 export function MostrarTipo(tipo) {
     let resultado = document.querySelector("#resultado");
-   
-    resultado.innerHTML ="<h1>Seu arquetipo é: " + tipo + "</h1>"
-    
+    resultado.innerHTML = "";
+    let h1 = document.createElement("h1")
+    h1.textContent = "Seu arquetipo é: " + tipo;
+    let botao = document.createElement("button")
+    botao.textContent = "Reiniciar"
+    botao.onclick = function(){
+        window.location.reload();
+    }
+    resultado.appendChild(h1);
+    resultado.appendChild(botao);    
    
 }

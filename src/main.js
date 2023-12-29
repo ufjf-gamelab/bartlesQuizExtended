@@ -42,8 +42,8 @@ function porPerguntaTela(){
 export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
-        CalculaArquetipo();
-        MostrarTipo()
+        const tipo = CalculaArquetipo();
+        MostrarTipo(tipo)
         return;
     }else{
         perguntaAtual++;
