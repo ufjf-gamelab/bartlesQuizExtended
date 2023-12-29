@@ -23,7 +23,6 @@ let perguntas= [
     CriaPergunta("O que é mais importante para você?",
                  "A qualidade do roleplay em um jogo online","socializer",
                  " A singularidade das características e mecânicas do jogo","explorer"),
-                 
     CriaPergunta("Você é um jogador em um jogo online e quer lutar contra um dragão realmente difícil. Como você abordaria esse problema?",
                  "Reunir um grande grupo de jogadores para matá-lo","socializer",
                  "Experimentar uma variedade de armas e magias contra ele até encontrar sua fraqueza","explorer"),
