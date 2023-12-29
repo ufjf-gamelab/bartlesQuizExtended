@@ -2,7 +2,7 @@ import {CriaPergunta, CalculaArquetipo} from "./pergunta.js";
 import { MostrarTipo } from "./tela.js";
 import {AtualizaTela} from "./tela.js";
 let perguntas= [
-    CriaPergunta("Você se sente mais à vontade, como jogador em um jogo online:", 
+    CriaPergunta("Você se sente mais à vontade, como jogador em um jogo online?", 
                  "Conversando com amigos em uma taverna","socializer",
                  "Caçando orcs sozinho em busca de experiência","achivier"),
     CriaPergunta("O que você curte mais em missões?", 
