@@ -18,7 +18,7 @@ export function MostrarTipo(tipo) {
     let resultado = document.querySelector("#resultado");
     resultado.innerHTML = "";
     let h1 = document.createElement("h1")
-    h1.textContent = "Você é " + tipo;
+    h1.innerHTML = "Você é " + tipo;
     let botao = document.createElement("button")
     botao.textContent = "Faça o teste novamente"
     botao.onclick = function(){

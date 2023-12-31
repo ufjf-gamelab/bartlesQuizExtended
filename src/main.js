@@ -110,6 +110,8 @@ export function passarPergunta(){
         MostrarTipo(tipo)
         return;
     }else{
+        let progess = document.querySelector("#progress")
+        progess.value += 1
         perguntaAtual++;
         porPerguntaTela()
     }

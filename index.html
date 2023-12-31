@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Motivation</title>
-    <link rel="stylesheet" href="./estilos/estilo.css">
+    <link rel="stylesheet" href="./estilos/telapequena.css">
+    <link rel="stylesheet" href="./estilos/telagrande.css">
+
+    <link rel="shortcut icon" type="image/jpg" href="logoinova.jpg">
     <script type="module" src="./src/main.js"></script>
 </head>
 <body>
     <h1 class="titulo">Player Motivation</h1>
     <main id="resultado">
         <h2 class="subtitulo"> Responda pra saber qual seu arquetipo de jogador</h2>
-
         <p id="Pergunta">Pergunta</p>
         <section>
             <button id="RespostaA">resposta A</button>
             <button id="RespostaB">resposta B</button>
+            <progress  id="progress" value="0" min="0" max="28"></progress>
         </section>
     </main>
+    <footer>
+        <h2>Inova Games - UFJF</h2>
+        <p>Fontes:<a href="https://andreasen.org/bartle/questions-en.dat">Bartle's Taxonomy of Player Types</a></p>
+        <p>Autores:<a href="https://github.com/Miguel-Dias-112"> Miguel Dias</a>,<a href="https://github.com/0xMentat">Gabriel Basilio</a>,<a href="https://github.com/Miguel-Dias-112">Gabriel Baraky</a></p>
+    </footer>
 </body>
 </html>
