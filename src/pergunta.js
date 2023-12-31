@@ -14,7 +14,7 @@ export function CalculaArquetipo(){
     const porcentagema = ((arquetipo['achiever']/tamanho)*100).toFixed(1)
     const porcentagems = ((arquetipo['socializer']/tamanho)*100).toFixed(1)
     const porcentageme = ((arquetipo['explorer']/tamanho)*100).toFixed(1)
-    let frase= "\n"+porcentagemk+" killer \n"+ porcentagema+" achiever \n"+porcentagems+" socializer \n"+porcentageme+" explorer "
+    let frase= "\n"+porcentagemk+"% killer \n"+ porcentagema+"% achiever \n"+porcentagems+"% socializer \n"+porcentageme+"% explorer "
 
     return frase;
 }
