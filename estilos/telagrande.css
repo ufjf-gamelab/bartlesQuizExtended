@@ -11,7 +11,7 @@ body{
     
     display: grid !important;
     grid-template-columns: 1fr;
-    grid-template-rows: 70px 90vh 150px;
+    grid-template-rows: 70px calc(100vh - 70px) 150px;
     
 
     align-items: center;
