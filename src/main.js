@@ -1,5 +1,5 @@
-import {CriaPergunta, CalculaArquetipo} from "./pergunta.js";
-import { MostrarTipo } from "./tela.js";
+import {CriaPergunta, calcularPorcentagem} from "./pergunta.js";
+import { MostrarPorcentagens } from "./tela.js";
 import {AtualizaTela} from "./tela.js";
 let perguntas= [
     CriaPergunta("Você se sente mais à vontade, como jogador em um jogo online?", 
@@ -106,8 +106,8 @@ function porPerguntaTela(){
 export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
-        const tipo = CalculaArquetipo();
-        MostrarTipo(tipo)
+        const porcentagem = calcularPorcentagem();
+        MostrarPorcentagens(porcentagem)
         return;
     }else{
         let progess = document.querySelector("#progress")
