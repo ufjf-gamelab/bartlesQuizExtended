@@ -8,24 +8,15 @@ let arquetipo = {
 }
 
 export function CalculaArquetipo(){
-    let tipo = "";
+    const tamanho=arquetipo.killer+arquetipo.achiever+arquetipo.socializer+arquetipo.explorer
 
-   
-    if( arquetipo.killer > arquetipo.achiever && arquetipo.killer > arquetipo.socializer && arquetipo.killer > arquetipo.explorer){
-        tipo = "Killer";
-    }
-    if( arquetipo.achiever > arquetipo.killer && arquetipo.achiever > arquetipo.socializer && arquetipo.achiever > arquetipo.explorer){
-        tipo = "Achiever";
-    }
-    if( arquetipo.socializer > arquetipo.killer && arquetipo.socializer > arquetipo.achiever && arquetipo.socializer > arquetipo.explorer){
-        tipo = "Socializer";
-    }
-    if( arquetipo.explorer > arquetipo.killer && arquetipo.explorer > arquetipo.achiever && arquetipo.explorer > arquetipo.socializer){ 
-        tipo     = "Explorer";
-    }
- 
+    const porcentagemk = ((arquetipo['killer']/tamanho)*100).toFixed(1)
+    const porcentagema = ((arquetipo['achiever']/tamanho)*100).toFixed(1)
+    const porcentagems = ((arquetipo['socializer']/tamanho)*100).toFixed(1)
+    const porcentageme = ((arquetipo['explorer']/tamanho)*100).toFixed(1)
+    let frase= "\n"+porcentagemk+" killer \n"+ porcentagema+" achiever \n"+porcentagems+" socializer \n"+porcentageme+" explorer "
 
-    return tipo;
+    return frase;
 }
 
 export function CriaPergunta(Pergunta, textoResposta1,Opcao1,textoResposta2, Opcao2){

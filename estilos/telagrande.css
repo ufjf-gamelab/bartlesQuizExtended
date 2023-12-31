@@ -57,6 +57,14 @@ main{
     grid-row: 1;
     grid-column: 1;
 }
+main h1{
+    margin: 0%;
+    padding: 0%;
+    width: 90%;
+    font-size: 30px;
+    text-align: center;
+    
+ }
 main h2{
     margin: 0%;
     padding: 0%;
