@@ -27,8 +27,7 @@
       
         width: 100%;
         height: 500px;
-
-        padding-bottom: calc(100vh - 600px);
+        padding-bottom: calc(100vh - 500px);
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -69,6 +68,9 @@
          gap: 30px;
          justify-content: center;
      }
+     main section progress{
+        width: 250px;
+    }
      button{
          border: 3px solid black;
          border-radius: 8px;
