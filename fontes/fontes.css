@@ -1,0 +1,16 @@
+@font-face {
+    font-family: pixelation;
+    src: url(../fontes/pixelation\ \(mega\ pixel\ alternative\)/Pixelation.ttf);
+}
+@font-face {
+  font-family: vt323;
+  src: url(../fontes/VT323/VT323-Regular.ttf);
+}
+@font-face {
+  font-family: anonymus_pro_bold;
+  src: url(../fontes/anonymus_pro/AnonymousPro-Bold.ttf);
+}
+@font-face {
+  font-family: anonymus_pro;
+  src: url(../fontes/anonymus_pro/AnonymousPro-Regular.ttf);
+}
