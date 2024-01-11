@@ -1,0 +1,73 @@
+@import url(mainTelaGrande.css);
+@import url(mainTelaPeq.css);
+
+main h2{
+    margin: 0%;
+    padding: 0%;
+    width: 90%;
+    font-size: 30px;
+    font-family: 'pixelation',sans-serif;
+    color: black;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+main p{
+    text-align: center;
+    font-family: 'vt323',sans-serif;
+
+    margin: 0%;
+    padding: 0%;
+    font-size: 25px;
+    width: 80%;
+    min-height: 150px;
+
+
+}
+
+main section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+}
+
+main section progress{
+    width: 250px;
+    height: 30px;
+    margin-right: 10px;
+}
+main section span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "anonymus_pro_bold";
+    gap: 5px;
+    flex-direction: column;
+}
+
+button{
+    border: 3px solid #00cccc;
+    border-radius: 8px;
+    background: #00cccc;
+    width: 300px;
+    min-height: 100px;
+    height: auto;
+    padding: 10px;
+    font-family: 'vt323',sans-serif;
+    color: black ;
+    font-size: 20px;
+}
+button:hover{
+    border: 3px solid #00ffff;
+
+    background: #00ffff;
+    color: black;
+    font-style:bold;
+    
+}

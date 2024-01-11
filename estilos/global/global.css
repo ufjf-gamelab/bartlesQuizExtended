@@ -1,0 +1,24 @@
+/* global.css */
+@import url(bodyTelaGrande.css);
+@import url(bodyTelaPeq.css);
+
+progress{
+    border: 3px solid #024d4d;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+  progress::-webkit-progress-bar {
+    background-color: whitesmoke;
+    color: #024d4d;
+  }
+  progress::-webkit-progress-value {
+    background-color: #024d4d;
+    
+  }
+ 
+a:link { color: lightskyblue; }
+a:visited { color: lightskyblue; }
+a:hover { color: lightskyblue; }
+a:active { color: #ff4040; text-decoration:none; font-weight:normal; }
+
