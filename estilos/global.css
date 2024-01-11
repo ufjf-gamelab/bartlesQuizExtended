@@ -1,16 +1,17 @@
 /* global.css */
 progress{
-    border: 3px solid black;
+    border: 3px solid #024d4d;
     border-radius: 5px;
     background-color: #ffffff;
 }
 
   progress::-webkit-progress-bar {
     background-color: whitesmoke;
-    color: blue;
+    color: #024d4d;
   }
   progress::-webkit-progress-value {
-    background-color: blue;
+    background-color: #024d4d;
+    
   }
  
 a:link { color: lightskyblue; }
@@ -21,14 +22,16 @@ a:active { color: #ff4040; text-decoration:none; font-weight:normal; }
 .logo_head{
     
     
-    padding-left: calc( 50% - 45px) ;
-    padding-right: calc( 50% - 45px) ;
+    padding-left: calc( 50% - 50px) ;
+    padding-right: calc( 50% - 50px) ;
 
     background-color: black;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+
 
 }
   
@@ -43,24 +46,24 @@ a:active { color: #ff4040; text-decoration:none; font-weight:normal; }
     grid-row: 1;
     grid-column: 1;
 
-    background-color:black;
+    background-color:#00cccc;
+    border-bottom: 5px solid #ccf4f4;
     font-family: 'pixelation',sans-serif;
 }
 
-main h1{
-    margin: 0%;
-    padding: 0%;
-    width: 90%;
-    font-size: 30px;
-    text-align: center;
-}
 
 main h2{
     margin: 0%;
     padding: 0%;
     width: 90%;
     font-size: 30px;
-    font-family: 'anonymus_pro_bold',sans-serif;
+    font-family: 'pixelation',sans-serif;
+    color: black;
+
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     text-align: center;
 }
 
@@ -71,7 +74,8 @@ main p{
     margin: 0%;
     padding: 0%;
     font-size: 25px;
-    width: 90%;
+    width: 80%;
+
 
 }
 
@@ -89,21 +93,22 @@ main section progress{
 }
 
 button{
-    border: 3px solid black;
+    border: 3px solid #00cccc;
     border-radius: 8px;
-    background: whitesmoke;
+    background: #00cccc;
     width: 250px;
     min-height: 70px;
     height: auto;
     padding: 10px;
     font-family: 'vt323',sans-serif;
-
+    color: black ;
     font-size: 20px;
 }
 button:hover{
-     
-    background: black;
-    color: whitesmoke;
+    border: 3px solid #00ffff;
+
+    background: #00ffff;
+    color: black;
     font-style:bold;
     
 }

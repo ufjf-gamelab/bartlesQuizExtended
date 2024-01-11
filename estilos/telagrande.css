@@ -12,6 +12,8 @@ body{
     grid-template-rows: 70px calc(100vh - 100px) auto;
     align-items: center;
     justify-items: center;
+    font-family: 'pixelation',sans-serif;
+
 }
 
 main{
@@ -24,9 +26,9 @@ main{
     max-width: 700px;
     min-height: 200px;
     border-radius: 10px;
-    color: rgb(116, 101, 129);
     
-    border: 5px solid  #a93aff;
+    border: 5px solid  #00cccc;
+    color: black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -51,6 +53,7 @@ main{
      justify-content: center;
      align-items: center;
     
+     
      gap: 5px;
      padding-bottom: 30px;
      flex-wrap: wrap;
@@ -78,5 +81,10 @@ main{
     align-items: center;
     justify-content: center;
  }
+ footer p a{
+    margin-left: 15px;
+    
+
+}
  
 }

@@ -24,7 +24,7 @@ export function MostrarPorcentagens(porcentagens) {
     resultado.style.alignItems = "center";
 
     let h1 = document.createElement("h1")
-    h1.innerHTML = "Você é arqutipo é:" ;
+    h1.innerHTML = "Seu arquetipo de jogador:" ;
 
     let sec = document.createElement("section")
     sec.style.display = "flex"
@@ -46,7 +46,7 @@ export function MostrarPorcentagens(porcentagens) {
         const spam = document.createElement("spam")
         
         spam.style.width = "150px"
-        spam.textContent = " "+` ${tipos[i]}`+" "+`${porcentagens[i].toFixed(1)}%`
+        spam.textContent = " "+` ${tipos[i]}`+" \n"+`${porcentagens[i].toFixed(1)}%`
          //"tipos[i]+" "+porcentagens[i].toFixed(1)+"%"
         progress.value = porcentagens[i]
         progress.max = 100
