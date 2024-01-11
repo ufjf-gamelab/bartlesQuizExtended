@@ -18,6 +18,38 @@ a:visited { color: lightskyblue; }
 a:hover { color: lightskyblue; }
 a:active { color: #ff4040; text-decoration:none; font-weight:normal; }
 
+@font-face {
+    font-family: pixelation;
+    src: url(../fontes/pixelation\ \(mega\ pixel\ alternative\)/Pixelation.ttf);
+  }
+  @font-face {
+    font-family: vt323;
+    src: url(../fontes/VT323/VT323-Regular.ttf);
+  }
+  @font-face {
+    font-family: anonymus_pro_bold;
+    src: url(../fontes/anonymus_pro/AnonymousPro-Bold.ttf);
+  }
+  @font-face {
+    font-family: anonymus_pro;
+    src: url(../fontes/anonymus_pro/AnonymousPro-Regular.ttf);
+  }
+  
+  
+.titulo{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 70px;
+    grid-row: 1;
+    grid-column: 1;
+
+    background-color:black;
+    font-family: 'pixelation',sans-serif;
+}
 
 main h1{
     margin: 0%;
@@ -32,15 +64,19 @@ main h2{
     padding: 0%;
     width: 90%;
     font-size: 30px;
+    font-family: 'anonymus_pro_bold',sans-serif;
     text-align: center;
 }
 
 main p{
     text-align: center;
+    font-family: 'vt323',sans-serif;
+
     margin: 0%;
     padding: 0%;
     font-size: 25px;
     width: 90%;
+
 }
 
 main section{
@@ -64,6 +100,8 @@ button{
     min-height: 70px;
     height: auto;
     padding: 10px;
+    font-family: 'vt323',sans-serif;
+
     font-size: 20px;
 }
 button:hover{
