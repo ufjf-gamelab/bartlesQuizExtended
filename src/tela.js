@@ -23,7 +23,7 @@ export function MostrarPorcentagens(porcentagens) {
     resultado.style.justifyContent = "space-around";
     resultado.style.alignItems = "center";
 
-    let h1 = document.createElement("h1")
+    let h1 = document.createElement("h2")
     h1.innerHTML = "Seu arquetipo de jogador:" ;
 
     let sec = document.createElement("section")
@@ -32,7 +32,7 @@ export function MostrarPorcentagens(porcentagens) {
     sec.style.justifyContent = "space-around"
     sec.style.alignItems = "center"
     
-    const tipos = ["Killer","Achiever","Socializer","Explorer"]
+    const tipos = ["Killer   ","Achiever","Socializer","Explorer"]
     for (let i = 0; i < 4; i++) {
 
         let div = document.createElement("div")
@@ -43,10 +43,16 @@ export function MostrarPorcentagens(porcentagens) {
         div.style.alignItems = "flex=start"
         div.style.gap="5px"
         const progress = document.createElement("progress")
-        const spam = document.createElement("spam")
-        
+        const spam = document.createElement("span")
         spam.style.width = "150px"
-        spam.textContent = " "+` ${tipos[i]}`+" \n"+`${porcentagens[i].toFixed(1)}%`
+
+        const spamText = document.createElement("span")
+        spamText.textContent = tipos[i]
+        const spamText2 = document.createElement("span")
+        spamText2.textContent = porcentagens[i].toFixed(1)+"%"
+
+        spam.appendChild(spamText)
+        spam.appendChild(spamText2)
          //"tipos[i]+" "+porcentagens[i].toFixed(1)+"%"
         progress.value = porcentagens[i]
         progress.max = 100

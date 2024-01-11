@@ -59,11 +59,9 @@ main h2{
     font-size: 30px;
     font-family: 'pixelation',sans-serif;
     color: black;
-
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
-
     text-align: center;
 }
 
@@ -75,6 +73,7 @@ main p{
     padding: 0%;
     font-size: 25px;
     width: 80%;
+    min-height: 150px;
 
 
 }
@@ -84,20 +83,31 @@ main section{
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     justify-content: center;
 }
 
 main section progress{
     width: 250px;
+    height: 30px;
+    margin-right: 10px;
+}
+main section span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "anonymus_pro_bold";
+    gap: 5px;
+    flex-direction: column;
 }
 
 button{
     border: 3px solid #00cccc;
     border-radius: 8px;
     background: #00cccc;
-    width: 250px;
-    min-height: 70px;
+    width: 300px;
+    min-height: 100px;
     height: auto;
     padding: 10px;
     font-family: 'vt323',sans-serif;
