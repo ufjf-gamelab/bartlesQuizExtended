@@ -1,0 +1,20 @@
+@media (max-width: 810px) {
+    main{
+      
+        width: 100%;
+        padding-top: 30px;
+        height: calc(100vh - 190px);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;    
+        align-items: flex-start;
+        justify-content: center;  
+    }
+    main section{
+        max-width: 525px;
+
+    }
+     main section progress{
+        width: 250px;
+    }
+}
