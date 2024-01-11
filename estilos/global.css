@@ -1,0 +1,75 @@
+/* global.css */
+progress{
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+  progress::-webkit-progress-bar {
+    background-color: whitesmoke;
+    color: blue;
+  }
+  progress::-webkit-progress-value {
+    background-color: blue;
+  }
+ 
+a:link { color: lightskyblue; }
+a:visited { color: lightskyblue; }
+a:hover { color: lightskyblue; }
+a:active { color: #ff4040; text-decoration:none; font-weight:normal; }
+
+
+main h1{
+    margin: 0%;
+    padding: 0%;
+    width: 90%;
+    font-size: 30px;
+    text-align: center;
+}
+
+main h2{
+    margin: 0%;
+    padding: 0%;
+    width: 90%;
+    font-size: 30px;
+    text-align: center;
+}
+
+main p{
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    font-size: 25px;
+    width: 90%;
+}
+
+main section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+main section progress{
+    width: 250px;
+}
+
+button{
+    border: 3px solid black;
+    border-radius: 8px;
+    background: whitesmoke;
+    width: 250px;
+    min-height: 70px;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+}
+button:hover{
+     
+    background: black;
+    color: whitesmoke;
+    font-style:bold;
+    
+}
