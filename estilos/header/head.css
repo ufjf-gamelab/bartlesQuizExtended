@@ -3,20 +3,29 @@
     color: white;   
     margin: 0%;
     padding: 0%;
+    width: calc(100% - 1rem);
+
+    padding-left: 1rem;
+
+    padding-bottom: 0;
 }
 header h2{
     color: white;
+    width: calc(100% - 1rem);
     margin: 0%;
-    padding: 0%;
+    padding-left: 1rem;
+
+    padding-bottom: 1rem;
     font-size: small;
 }
 header{
     margin: 0;
-
+    
     grid-row: 1;
     grid-column: 1;
     width: 100%;
-    height: 100%;
+    height: auto;
+    
     background-color:#00cccc;
     border-bottom: 5px solid #ccf4f4;
 
