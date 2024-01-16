@@ -41,9 +41,3 @@ header{
 
 }
 
-@media (max-width: 810px) {
-
-    header{
-        height: 70px !important;
-    }
-}
