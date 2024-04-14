@@ -28,9 +28,10 @@ export function calcularResultado(){
    
     const nomesImplicitos = ['Planner','Scientist','Network','Politician']
     const nomesExplicitos = ['Opportunist','Hacker','Friend','Griefer']
-    const nomes = [nomesExplicitos,nomesImplicitos]
- 
-    resultado= {
+    const nomes = [nomesImplicitos,nomesExplicitos]
+    
+    
+    const resultado= {
         killer: {
                     porcetagem: porcentagemk,
                     ImplicitoExplicito: killer8D,
