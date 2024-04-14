@@ -1,3 +1,5 @@
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+import { getDesc } from './DescriçõesData.js';
 export function AtualizaTela(Pergunta) {
     let Resposta1Ctn = document.querySelector("#RespostaA");
     let Resposta2Ctn = document.querySelector("#RespostaB");
@@ -14,6 +16,7 @@ export function AtualizaTela(Pergunta) {
     Resposta1Ctn.onclick = Pergunta.cliqueReposta1;
     Resposta2Ctn.onclick = Pergunta.cliqueReposta2;
 }
+
 export function MostrarResultado(Resultado) {
 
     
@@ -24,15 +27,10 @@ export function MostrarResultado(Resultado) {
     resultadoCtn.style.flexDirection = "column";
     resultadoCtn.style.justifyContent = "space-around";
     resultadoCtn.style.alignItems = "center";
-
+    resultadoCtn.style.gap = "0";
     let h1 = document.createElement("h2")
     h1.innerHTML = "Seu arquetipo de jogador:" ;
 
-    let sec = document.createElement("section")
-    sec.style.display = "flex"
-    sec.style.flexDirection = "column"
-    sec.style.justifyContent = "space-around"
-    sec.style.alignItems = "center"
     
     const arquetipos =[ Resultado.killer,Resultado.achiever,Resultado.socializer,Resultado.explorer]
     function compararPorIdade(a, b) {
@@ -40,41 +38,66 @@ export function MostrarResultado(Resultado) {
     }
     arquetipos.sort(compararPorIdade);
     arquetipos.reverse();
-    for (let i = 0; i < 4; i++) {
-
-        let div = document.createElement("div")
-        div.style.width = "100%"
-        div.style.display = "flex"
-        div.style.flexDirection = "row"
-        div.style.justifyContent = "space-around"
-        div.style.alignItems = "flex=start"
-        div.style.gap="5px"
-        const progress = document.createElement("progress")
-        const spam = document.createElement("span")
-        spam.style.width = "150px"
 
 
-        const spamText = document.createElement("span")
-        console.log(arquetipos)
-        spamText.textContent = arquetipos[i].nome
 
-        const spamText2 = document.createElement("span")
-        console.log(arquetipos[i])
-        spamText2.textContent =arquetipos[i].porcetagem.toFixed(1)+"%"
+    let swiperctn = document.createElement("div")
+    swiperctn.classList.add('swiper')
+    swiperctn.style.zIndex = "100"
+    swiperctn.style.width="100%"
+    swiperctn.style.height="auto"
 
-        spam.appendChild(spamText)
-        spam.appendChild(spamText2)
-         //"tipos[i]+" "+porcentagens[i].toFixed(1)+"%"
-        progress.value =arquetipos[i].porcetagem
-        progress.max = 100
-        div.appendChild(progress)
-        div.appendChild(spam)
-
-        sec.appendChild(div)
-
-
-    }
+    let wrapper = document.createElement("div")
+    wrapper.style.width = "100%"
+    wrapper.style.height = "100%"
+    wrapper.classList.add('swiper-wrapper')
    
+    for (let i = 0; i < 4; i++) {
+        let div  = document.createElement('div')
+      
+        div.classList.add("swiper-slide")
+        div.style.display = "flex"
+        div.style.flexDirection = "column"
+        div.style.justifyContent = "space-around"
+        div.style.alignItems = "center"
+        div.style.gap = "10px"
+
+
+        let titulo = document.createElement("h2")
+        titulo.style.fontFamily = "vt323"
+        titulo.textContent = arquetipos[i].porcetagem.toFixed(1) + "% " +arquetipos[i].nome
+        titulo.style.textAlign = "center"
+        titulo.style.fontSize = "15px"
+        titulo.style.width = "50%"
+        titulo.style.border = "5px solid black"
+
+        let img = document.createElement("img")
+        console.log(getDesc(), arquetipos[i].nome)
+        img.src = getDesc()[arquetipos[i].nome].img
+        img.style.width = "150px"
+        img.style.height = "150px"
+        img.style.borderRadius = "10px"
+        img.style.border = "5px solid black"
+        
+        let h3 = document.createElement("h3")
+        h3.textContent = getDesc()[arquetipos[i].nome].descrição
+        h3.style.textAlign = "center"
+        h3.style.width = "60%"
+        h3.style.fontSize = "15px"
+        h3.style.fontFamily = "vt323"
+        h3.style.marginBottom = "40px"
+        div.appendChild(titulo)
+        div.appendChild(img)
+        div.appendChild(h3)
+
+        wrapper.appendChild(div)
+    }
+    swiperctn.appendChild(wrapper)
+   
+    let div = document.createElement("div")
+    div.classList.add('swiper-pagination')
+    swiperctn.appendChild(div)
+ 
    
 
     const  botao = document.createElement("button")
@@ -83,9 +106,29 @@ export function MostrarResultado(Resultado) {
         window.location.reload();
     }
     resultadoCtn.appendChild(h1);
-    
-
-    resultadoCtn.appendChild(sec);
+    resultadoCtn.appendChild(swiperctn);
     resultadoCtn.appendChild(botao);    
    
+
+    const swiper = new  Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
 }
