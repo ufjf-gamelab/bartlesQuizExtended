@@ -1,6 +1,6 @@
 import { getPerguntas } from "./PerguntasData.js";
-import {CriaPergunta, calcularPorcentagem} from "./pergunta.js";
-import { MostrarPorcentagens } from "./tela.js";
+import {CriaPergunta, calcularResultado} from "./pergunta.js";
+import { MostrarResultado } from "./tela.js";
 import {AtualizaTela} from "./tela.js";
 
 let perguntas = getPerguntas();
@@ -15,8 +15,8 @@ function porPerguntaTela(){
 export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
-        const porcentagem = calcularPorcentagem();
-        MostrarPorcentagens(porcentagem)
+        const porcentagem = calcularResultado();
+        MostrarResultado(porcentagem)
         return;
     }else{
         let progess = document.querySelector("#progress")

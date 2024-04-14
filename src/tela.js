@@ -14,14 +14,16 @@ export function AtualizaTela(Pergunta) {
     Resposta1Ctn.onclick = Pergunta.cliqueReposta1;
     Resposta2Ctn.onclick = Pergunta.cliqueReposta2;
 }
-export function MostrarPorcentagens(porcentagens) {
-    let resultado = document.querySelector("#resultado");
-    resultado.innerHTML = "";
+export function MostrarResultado(Resultado) {
 
-    resultado.style.display = "flex";
-    resultado.style.flexDirection = "column";
-    resultado.style.justifyContent = "space-around";
-    resultado.style.alignItems = "center";
+    
+    let resultadoCtn = document.querySelector("#resultado");
+    resultadoCtn.innerHTML = "";
+
+    resultadoCtn.style.display = "flex";
+    resultadoCtn.style.flexDirection = "column";
+    resultadoCtn.style.justifyContent = "space-around";
+    resultadoCtn.style.alignItems = "center";
 
     let h1 = document.createElement("h2")
     h1.innerHTML = "Seu arquetipo de jogador:" ;
@@ -32,7 +34,12 @@ export function MostrarPorcentagens(porcentagens) {
     sec.style.justifyContent = "space-around"
     sec.style.alignItems = "center"
     
-    const tipos = ["Killer   ","Achiever","Socializer","Explorer"]
+    const arquetipos =[ Resultado.killer,Resultado.achiever,Resultado.socializer,Resultado.explorer]
+    function compararPorIdade(a, b) {
+        return a.porcetagem - b.porcetagem;
+    }
+    arquetipos.sort(compararPorIdade);
+    arquetipos.reverse();
     for (let i = 0; i < 4; i++) {
 
         let div = document.createElement("div")
@@ -46,15 +53,19 @@ export function MostrarPorcentagens(porcentagens) {
         const spam = document.createElement("span")
         spam.style.width = "150px"
 
+
         const spamText = document.createElement("span")
-        spamText.textContent = tipos[i]
+        console.log(arquetipos)
+        spamText.textContent = arquetipos[i].nome
+
         const spamText2 = document.createElement("span")
-        spamText2.textContent = porcentagens[i].toFixed(1)+"%"
+        console.log(arquetipos[i])
+        spamText2.textContent =arquetipos[i].porcetagem.toFixed(1)+"%"
 
         spam.appendChild(spamText)
         spam.appendChild(spamText2)
          //"tipos[i]+" "+porcentagens[i].toFixed(1)+"%"
-        progress.value = porcentagens[i]
+        progress.value =arquetipos[i].porcetagem
         progress.max = 100
         div.appendChild(progress)
         div.appendChild(spam)
@@ -71,10 +82,10 @@ export function MostrarPorcentagens(porcentagens) {
     botao.onclick = function(){
         window.location.reload();
     }
-    resultado.appendChild(h1);
+    resultadoCtn.appendChild(h1);
     
 
-    resultado.appendChild(sec);
-    resultado.appendChild(botao);    
+    resultadoCtn.appendChild(sec);
+    resultadoCtn.appendChild(botao);    
    
 }
