@@ -4,7 +4,8 @@ let arquetipo = {
     killer: 0,
     achiever: 0,
     socializer: 0,
-    explorer: 0
+    explorer: 0,
+    Implicito: 0
 }
 
 export function calcularPorcentagem(){
