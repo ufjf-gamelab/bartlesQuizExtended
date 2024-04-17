@@ -74,8 +74,9 @@ export function MostrarResultado(Resultado) {
         let img = document.createElement("img")
         console.log(getDesc(), arquetipos[i].nome)
         img.src = getDesc()[arquetipos[i].nome].img
-        img.style.width = "150px"
-        img.style.height = "150px"
+        img.style.width = "80px"
+        img.style.height = "80px"
+        img.style.padding = "20px"
         img.style.borderRadius = "10px"
         img.style.border = "5px solid black"
         
@@ -101,14 +102,21 @@ export function MostrarResultado(Resultado) {
    
 
     const  botao = document.createElement("button")
-    botao.textContent = "Faça o teste novamente"
+    botao.textContent = "mostrar em barras"
     botao.onclick = function(){
+        barra
+    }
+    const  botao2 = document.createElement("button")
+    botao2.textContent = "Faça o teste novamente"
+    botao2.onclick = function(){
         window.location.reload();
     }
     resultadoCtn.appendChild(h1);
     resultadoCtn.appendChild(swiperctn);
-    resultadoCtn.appendChild(botao);    
-   
+    resultadoCtn.appendChild(botao2);    
+    resultadoCtn.appendChild(botao); 
+    botao.style.minHeight = "auto"   
+    botao2.style.minHeight = "auto"
 
     const swiper = new  Swiper('.swiper', {
         // Optional parameters
