@@ -1,4 +1,5 @@
 import { getPerguntas } from "./PerguntasData.js";
+import { Swipper } from "./ResultadoSwipper.js";
 import {CriaPergunta, calcularResultado} from "./pergunta.js";
 import { MostrarResultado } from "./tela.js";
 import {AtualizaTela} from "./tela.js";
@@ -16,7 +17,7 @@ export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
         const porcentagem = calcularResultado();
-        MostrarResultado(porcentagem)
+        Swipper(porcentagem)
         return;
     }else{
         let progess = document.querySelector("#progress")
