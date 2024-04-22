@@ -1,4 +1,4 @@
-import {CriaPergunta} from "./pergunta.js";
+import {CriaPergunta} from "../Controler/pergunta.js";
 
 let perguntas= [
     CriaPergunta("Como jogador, você se sente mais à vontade em um jogo online:", 

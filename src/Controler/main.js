@@ -1,8 +1,7 @@
-import { getPerguntas } from "./PerguntasData.js";
-import { Swipper } from "./ResultadoSwipper.js";
+import { getPerguntas } from "../Model/PerguntasData.js";
+import { Swipper } from "../View/ResultadoSwipper.js";
 import {CriaPergunta, calcularResultado} from "./pergunta.js";
-import { MostrarResultado } from "./tela.js";
-import {AtualizaTela} from "./tela.js";
+import {CriaPergunta } from "../View/CriaPerguta.js";
 
 let perguntas = getPerguntas();
 let perguntaAtual = 0;
@@ -10,9 +9,8 @@ porPerguntaTela()
 
 function porPerguntaTela(){
     let pergunta = perguntas[perguntaAtual];
-    AtualizaTela(pergunta);
+    CriaPergunta(pergunta);
 }
-//funçao chamada pelo clique do botao no pergunta.js
 export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
@@ -27,5 +25,4 @@ export function passarPergunta(){
     }
    
 }
-
-
+start()

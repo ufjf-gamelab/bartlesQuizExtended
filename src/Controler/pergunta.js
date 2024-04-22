@@ -14,11 +14,16 @@ let arquetipo = {
 }
 
 export function calcularResultado(){
+    const keys = ['killer','achiever','socializer','explorer']
+    
+    for (let i = 0; i < keys.length; i++) {
+        arquetipo[keys[i]] = Math.floor(Math.random() * 100);
+    }
+    
     const killer8D = arquetipo.killer8D
     const achiever8D = arquetipo.achiever8D
     const socializer8D = arquetipo.socializer8D
     const explorer8D = arquetipo.explorer8D
-    const tamanho=arquetipo.killer+arquetipo.achiever+arquetipo.socializer+arquetipo.explorer
 
     const porcentagemk = ((arquetipo['killer']/tamanho)*100)
     const porcentagema = ((arquetipo['achiever']/tamanho)*100)
