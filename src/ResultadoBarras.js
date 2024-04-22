@@ -1,5 +1,4 @@
-import { Swipper } from "./tela.js";
-
+import {Swipper} from './ResultadoSwipper.js'
 export function Barras(Resultado) {
 
     
