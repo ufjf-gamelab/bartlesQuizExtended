@@ -9,7 +9,7 @@ export function getDesc(){
                     tendem a se sentirem “melhores” que os outros, além de que suas ações sempre vingam para a
                     ideia de construir uma má reputação.
                     `
-            ,img:'../estilos/assets/asset7.png'
+            ,img:'./estilos/assets/asset7.png'
         },
         Politician:{
             descrição:`
@@ -20,7 +20,7 @@ export function getDesc(){
                 fazer com que tenham uma boa reputação e na sua ideia mais hostil eles tendem a
                 manipular pessoas para que os ajudem em seus objetivos.
                     `
-            ,img:'../estilos/assets/asset6.png'
+            ,img:'./estilos/assets/asset6.png'
         },
         Hacker:{
             descrição:`
@@ -30,7 +30,7 @@ export function getDesc(){
                 testar as ideias que eles têm, jogam em busca de fenômenos 
                 novos dentro daquele universo.
                 `
-            ,img:'../estilos/assets/asset5.png'
+            ,img:'./estilos/assets/asset5.png'
         },
         
         Scientist:{
@@ -40,7 +40,7 @@ export function getDesc(){
                 forma de obter conhecimento dentro do jogo e visa explicar os fenômenos que acontecem
                 no mesmo.
                 `
-            ,img:'../estilos/assets/asset0.png'
+            ,img:'./estilos/assets/asset0.png'
         },
         Planner:{
             descrição:`
@@ -49,7 +49,7 @@ export function getDesc(){
             resultado tardio e maior do que uma recompensa na hora, eles também tendem a focar em
             um objetivo específico sem se importar com os desafios ou obstáculos.
             `
-            ,img:'../estilos/assets/asset3.png'
+            ,img:'./estilos/assets/asset3.png'
         },
         Opportunist:{
             descrição:`
@@ -59,7 +59,7 @@ export function getDesc(){
             irão atrás, mas ao mesmo tempo, se há um obstaculo no caminho, eles tendem a desistir
             do que estão fazendo para fazer algo mais chamativo e agradável.
             `
-            ,img:'../estilos/assets/asset2.png'
+            ,img:'./estilos/assets/asset2.png'
                 
         },
         Network:{
@@ -69,7 +69,7 @@ export function getDesc(){
             informações que eles sabem também, ele busca jogadores considerados por ele úteis o
             suficiente para poderem ajudar ele em seus objetivos.
             `
-            ,img:'../estilos/assets/asset1.png'
+            ,img:'./estilos/assets/asset1.png'
         },
         Friend:{
             descrição:`
@@ -79,7 +79,7 @@ export function getDesc(){
             dele no jogo é conhecer mais pessoas para poder se divertir com sua companhia e
             amizade.
             `
-            ,img:'../estilos/assets/asset7.png'
+            ,img:'./estilos/assets/asset7.png'
         },
     }
 }
