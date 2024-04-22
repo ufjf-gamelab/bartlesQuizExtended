@@ -1,16 +1,13 @@
 import { getPerguntas } from "../Model/PerguntasData.js";
 import { Swipper } from "../View/ResultadoSwipper.js";
-import { calcularResultado} from "./pergunta.js";
-import {AtualizaTela } from "../View/CriaPerguta.js";
-
+import { calcularResultado} from "./arquetipos.js";
+import {AtualizaTelaPerguntas} from "../View/AtulizaTelaPerguntas.js"
+import {setArquetipo} from "./arquetipos.js"
 let perguntas = getPerguntas();
 let perguntaAtual = 0;
-porPerguntaTela()
+AtualizaTelaPerguntas(perguntas[perguntaAtual])
 
-function porPerguntaTela(){
-    let pergunta = perguntas[perguntaAtual];
-    AtualizaTela(pergunta);
-}
+
 export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
@@ -21,8 +18,27 @@ export function passarPergunta(){
         let progess = document.querySelector("#progress")
         progess.value += 1
         perguntaAtual++;
-        porPerguntaTela()
+        AtualizaTelaPerguntas(perguntas[perguntaAtual])
     }
    
 }
-start()
+export function CriaPergunta(Pergunta, textoResposta1,Opcao1,textoResposta2, Opcao2){
+    let pergunta = {
+        pergunta: Pergunta,
+        resposta1: textoResposta1,
+        resposta2: textoResposta2,
+        respondida:false,
+        cliqueReposta1: function(){
+            setArquetipo(Opcao1,1)
+            this.respondida = true;
+            passarPergunta()
+        },
+        cliqueReposta2: function(){
+            setArquetipo(Opcao1,1)
+            this.respondida = true;
+            passarPergunta()
+
+        }
+    }
+    return pergunta;
+}

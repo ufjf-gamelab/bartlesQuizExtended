@@ -1,6 +1,6 @@
 import { passarPergunta } from "./main.js";
 
-let arquertipos = {
+let arquetipos = {
     killer: 0,
     achiever: 0,
     socializer: 0,
@@ -22,12 +22,12 @@ function nomeArquetipo8D(eixo, nomeArquetipo){
 }
 export function calcularResultado(){
     const keys = ['achiever','explorer','socializer','killer']
-    const tamanho = arquertipos.achiever + arquertipos.explorer + arquertipos.socializer + arquertipos.killer 
+    const tamanho = arquetipos.achiever + arquetipos.explorer + arquetipos.socializer + arquetipos.killer 
     const resultado2 = {}
 
     for (let i = 0; i < keys.length; i++) {
-        const arquetipo = arquertipos[keys[i]] 
-        const ImplicitoExplicito = arquertipos[keys[i]+'8D']
+        const arquetipo = arquetipos[keys[i]] 
+        const ImplicitoExplicito = arquetipos[keys[i]+'8D']
         const nome2 = nomeArquetipo8D(ImplicitoExplicito,i)
         const porcentagem = (arquetipo/tamanho)*100
         resultado2[keys[i]] ={
@@ -40,24 +40,4 @@ export function calcularResultado(){
     return resultado2;
 }
 
-export function CriaPergunta(Pergunta, textoResposta1,Opcao1,textoResposta2, Opcao2){
-    let pergunta = {
-        pergunta: Pergunta,
-        resposta1: textoResposta1,
-        resposta2: textoResposta2,
-        respondida:false,
-        cliqueReposta1: function(){
-            arquertipos[Opcao1]++;
-            this.respondida = true;
-            passarPergunta()
-        },
-        cliqueReposta2: function(){
-            arquertipos[Opcao2]++;
-            this.respondida = true;
-            passarPergunta()
-
-        }
-    }
-    return pergunta;
-}
-
+export const setArquetipo = (arquetipo, valor) => arquetipos[arquetipo] = valor;
