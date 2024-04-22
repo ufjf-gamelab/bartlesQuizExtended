@@ -1,7 +1,7 @@
 import { getPerguntas } from "../Model/PerguntasData.js";
 import { Swipper } from "../View/ResultadoSwipper.js";
-import {CriaPergunta, calcularResultado} from "./pergunta.js";
-import {CriaPergunta } from "../View/CriaPerguta.js";
+import { calcularResultado} from "./pergunta.js";
+import {AtualizaTela } from "../View/CriaPerguta.js";
 
 let perguntas = getPerguntas();
 let perguntaAtual = 0;
@@ -9,7 +9,7 @@ porPerguntaTela()
 
 function porPerguntaTela(){
     let pergunta = perguntas[perguntaAtual];
-    CriaPergunta(pergunta);
+    AtualizaTela(pergunta);
 }
 export function passarPergunta(){
     const qntPerguntas = perguntas.length;

@@ -1,6 +1,6 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 import { getDesc } from '../Model/DescriçõesData.js';
-export function CriaPergunta(Pergunta) {
+export function AtualizaTela(Pergunta) {
     let Resposta1Ctn = document.querySelector("#RespostaA");
     let Resposta2Ctn = document.querySelector("#RespostaB");
     let PerguntaCtn = document.querySelector("#Pergunta");

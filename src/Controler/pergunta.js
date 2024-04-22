@@ -1,6 +1,6 @@
 import { passarPergunta } from "./main.js";
 
-let arquetipo = {
+let arquertipos = {
     killer: 0,
     achiever: 0,
     socializer: 0,
@@ -12,53 +12,32 @@ let arquetipo = {
     explorer8D: 0,
     
 }
-
-export function calcularResultado(){
-    const keys = ['killer','achiever','socializer','explorer']
-    
-    for (let i = 0; i < keys.length; i++) {
-        arquetipo[keys[i]] = Math.floor(Math.random() * 100);
-    }
-    
-    const killer8D = arquetipo.killer8D
-    const achiever8D = arquetipo.achiever8D
-    const socializer8D = arquetipo.socializer8D
-    const explorer8D = arquetipo.explorer8D
-
-    const porcentagemk = ((arquetipo['killer']/tamanho)*100)
-    const porcentagema = ((arquetipo['achiever']/tamanho)*100)
-    const porcentagems = ((arquetipo['socializer']/tamanho)*100)
-    const porcentageme = ((arquetipo['explorer']/tamanho)*100)
-
-   
+function nomeArquetipo8D(eixo, nomeArquetipo){
+    console.log(eixo,nomeArquetipo)
     const nomesImplicitos = ['Planner','Scientist','Network','Politician']
     const nomesExplicitos = ['Opportunist','Hacker','Friend','Griefer']
     const nomes = [nomesImplicitos,nomesExplicitos]
-    
-    
-    const resultado= {
-        killer: {
-                    porcetagem: porcentagemk,
-                    ImplicitoExplicito: killer8D,
-                    nome: nomes[killer8D][3]
-                },
-        achiever: {
-                    porcetagem: porcentagema,
-                    ImplicitoExplicito: achiever8D,
-                    nome: nomes[achiever8D][0]
-                },
-        socializer: {
-                    porcetagem: porcentagems,
-                    ImplicitoExplicito: socializer8D,
-                    nome: nomes[socializer8D][2]
-                },
-        explorer: {
-                    porcetagem: porcentageme,
-                    ImplicitoExplicito: explorer8D,
-                    nome: nomes[explorer8D][1]
-                },
+    const index = nomes[eixo][nomeArquetipo]
+    return nomes[eixo][nomeArquetipo]
+}
+export function calcularResultado(){
+    const keys = ['achiever','explorer','socializer','killer']
+    const tamanho = arquertipos.achiever + arquertipos.explorer + arquertipos.socializer + arquertipos.killer 
+    const resultado2 = {}
+
+    for (let i = 0; i < keys.length; i++) {
+        const arquetipo = arquertipos[keys[i]] 
+        const ImplicitoExplicito = arquertipos[keys[i]+'8D']
+        const nome2 = nomeArquetipo8D(ImplicitoExplicito,i)
+        const porcentagem = (arquetipo/tamanho)*100
+        resultado2[keys[i]] ={
+            porcetagem: porcentagem,
+            ImplicitoExplicito: ImplicitoExplicito,
+            nome: nome2
+        }
     }
-    return resultado;
+    console.log(resultado2)
+    return resultado2;
 }
 
 export function CriaPergunta(Pergunta, textoResposta1,Opcao1,textoResposta2, Opcao2){
@@ -66,15 +45,14 @@ export function CriaPergunta(Pergunta, textoResposta1,Opcao1,textoResposta2, Opc
         pergunta: Pergunta,
         resposta1: textoResposta1,
         resposta2: textoResposta2,
-
         respondida:false,
         cliqueReposta1: function(){
-            arquetipo[Opcao1]++;
+            arquertipos[Opcao1]++;
             this.respondida = true;
             passarPergunta()
         },
         cliqueReposta2: function(){
-            arquetipo[Opcao2]++;
+            arquertipos[Opcao2]++;
             this.respondida = true;
             passarPergunta()
 
