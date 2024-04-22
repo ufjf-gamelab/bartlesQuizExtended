@@ -1,4 +1,4 @@
-import {Swipper} from './ResultadoSwipper.js'
+import {MontarResultadoSwipper} from './ResultadoSwipper.js'
 
 function criaContainer(){
     let resultadoCtn = document.querySelector("#resultado");
@@ -26,7 +26,7 @@ function criarSectionInferior(Resultado){
     botao.textContent = "mostrar Swipper"
     botao.onclick = function(){
         console.log(Resultado)
-        Swipper(Resultado)
+        MontarResultadoSwipper(Resultado)
     }
     const  botao2 = document.createElement("button")
     botao2.textContent = "Faça o teste novamente"

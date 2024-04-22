@@ -1,5 +1,5 @@
 import { getPerguntas } from "../Model/PerguntasData.js";
-import { Swipper } from "../View/ResultadoSwipper.js";
+import { MontarResultadoSwipper } from "../View/ResultadoSwipper.js";
 import { calcularResultado} from "./arquetipos.js";
 import {AtualizaTelaPerguntas} from "../View/AtulizaTelaPerguntas.js"
 import {setArquetipo} from "./arquetipos.js"
@@ -12,7 +12,7 @@ export function passarPergunta(){
     const qntPerguntas = perguntas.length;
     if ( perguntaAtual == qntPerguntas - 1){
         const porcentagem = calcularResultado();
-        Swipper(porcentagem)
+        MontarResultadoSwipper(porcentagem)
         return;
     }else{
         let progess = document.querySelector("#progress")
