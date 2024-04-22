@@ -1,5 +1,5 @@
 import { getDesc } from "./DescriçõesData.js";
-import { Barras } from "./ResultadoBarras.js";
+import { MontarResultadoBarras } from "./ResultadoBarras.js";
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
 export function Swipper(Resultado) {
@@ -89,7 +89,7 @@ export function Swipper(Resultado) {
     const  botao = document.createElement("button")
     botao.textContent = "mostrar em barras"
     botao.onclick = function(){
-        Barras(Resultado)
+        MontarResultadoBarras(Resultado)
     }
     const  botao2 = document.createElement("button")
     botao2.textContent = "Faça o teste novamente"
