@@ -15,7 +15,7 @@ function criaContainer(){
     return resultadoCtn
 
 }
-function criarSectionInferior(Resultad){
+function criarSectionInferior(Resultado){
     const sec2 = document.createElement("section");
     const  botao = document.createElement("button")
     botao.textContent = "mostrar em barras"
@@ -95,13 +95,15 @@ function criaSwipper(arquetipo){
 
       wrapper.appendChild(div)
   }
+
   swiperctn.appendChild(wrapper)
 
   let div = document.createElement("div")
   div.classList.add('swiper-pagination')
   swiperctn.appendChild(div)
 
-  return swiperctn
+  return swiperctn  
+
 }
 function SwiperSetup(){
   const swiper = new  Swiper('.swiper', {
@@ -139,5 +141,7 @@ export function MontarResultadoSwipper(Resultado) {
    
     let sectionInferior = criarSectionInferior(Resultado)
     resultadoCtn.appendChild(sectionInferior);
+    SwiperSetup()
+
   
 }
