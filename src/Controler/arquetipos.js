@@ -26,18 +26,22 @@ export function calcularResultado(){
     const resultado2 = {}
 
     for (let i = 0; i < keys.length; i++) {
+        console.log(arquetipos)
         const arquetipo = arquetipos[keys[i]] 
         const ImplicitoExplicito = arquetipos[keys[i]+'8D']
         const nome2 = nomeArquetipo8D(ImplicitoExplicito,i)
+
         const porcentagem = (arquetipo/tamanho)*100
+
         resultado2[keys[i]] ={
             porcetagem: porcentagem,
             ImplicitoExplicito: ImplicitoExplicito,
             nome: nome2
         }
     }
-    console.log(resultado2)
     return resultado2;
 }
 
-export const setArquetipo = (arquetipo, valor) => arquetipos[arquetipo] = valor;
+export const setArquetipo = (arquetipo, valor) =>{
+    arquetipos[arquetipo] += valor;
+} 
