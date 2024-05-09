@@ -79,7 +79,7 @@ export function getDesc(){
             dele no jogo é conhecer mais pessoas para poder se divertir com sua companhia e
             amizade.
             `
-            ,img:'./estilos/assets/asset7.png'
+            ,img:'./estilos/assets/asset4.png'
         },
     }
 }

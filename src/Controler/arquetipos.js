@@ -43,5 +43,6 @@ export function calcularResultado(){
 }
 
 export const setArquetipo = (arquetipo, valor) =>{
+    console.log(arquetipo, valor)
     arquetipos[arquetipo] += valor;
 } 

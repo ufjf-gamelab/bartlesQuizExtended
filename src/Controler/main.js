@@ -34,7 +34,7 @@ export function CriaPergunta(Pergunta, textoResposta1,Opcao1,textoResposta2, Opc
             passarPergunta()
         },
         cliqueReposta2: function(){
-            setArquetipo(Opcao1,1)
+            setArquetipo(Opcao2,1)
             this.respondida = true;
             passarPergunta()
 

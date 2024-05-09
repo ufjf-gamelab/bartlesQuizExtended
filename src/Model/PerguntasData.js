@@ -7,7 +7,7 @@ let perguntas= [
                 ),
                 
     CriaPergunta("O que é mais prazeroso pra você?",
-                 "Matar um monstro grande","archiver",
+                 "Matar um monstro grande","achiever",
                  "Se gabar sobre isso para seus amigos","socializer",
                 ),
                             
@@ -23,12 +23,12 @@ let perguntas= [
 
     CriaPergunta("Você preferiria ser:",
                  "Popular","socializer",
-                 "Rico","archiver",
+                 "Rico","achiever",
                 ),
 
     CriaPergunta("O que você mais gosta em um jogo online?",
                  "Descobrir a ultima fofoca","socializer",
-                 "Conseguir um item novo","archiver",
+                 "Conseguir um item novo","achiever",
                 ),
 
     CriaPergunta("O que você preferiria ter, como jogador em um jogo online?",
@@ -128,7 +128,7 @@ let perguntas= [
 
     CriaPergunta("Você costuma:",
                  "Saber coisas que mais ninguém sabe","explorer",
-                 "Ter itens que mais ninguém tem","archiver",
+                 "Ter itens que mais ninguém tem","achiever",
                 ),
 
     CriaPergunta("Em um jogo online, você preferiria se juntar a um clã de:",
@@ -187,7 +187,7 @@ let perguntas= [
                 ),
 
     CriaPergunta("Você preferiria receber como recompensa por uma missão:",
-                 "Pontos de experiência(xp)","archiver",
+                 "Pontos de experiência(xp)","achiever",
                  "Uma varinha que contém 3 cargas de um feitiço que te permite controlar outros jogadores, contra a vontade deles","killer",
                 ),
 
@@ -198,22 +198,22 @@ let perguntas= [
 
                  //perguntas 8d
     CriaPergunta("Ao iniciar um jogo, qual seu objetivo:",
-                 "Você define um objetivo e planeja como alcança-lo","",
+                 "Você define um objetivo e planeja como alcança-lo","trash",
                  "Você procura o que fazer, mas sem ter um objetivo em mente até encontrar algo que te interesse","Achievers8D",
                 ),
 
     CriaPergunta("Durante um jogo, como você costuma adquirir conhecimento?",
-                 "Busco adquiri-lo de forma metódica"," ",
+                 "Busco adquiri-lo de forma metódica","trash",
                  "Costumo entender o jogo intuitivamente, sem precisar testar minhas ideias acerca dele","explorer8D",
                 ),
 
     CriaPergunta("Acerca de outro jogador:",
-                 "Você avalia as capacidades dele"," ",
+                 "Você avalia as capacidades dele","trash",
                  "Você gosta de sua companhia","socializer8D",
                 ),
 
     CriaPergunta("Em um jogo online, você prefere:",
-                 "Ter uma reputação boa"," ",
+                 "Ter uma reputação boa","trash",
                  "Ter uma GRANDE reputação ruim,por exemplo: atrapalhando outros players","killer8D",
                 ),
 ]
